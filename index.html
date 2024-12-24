@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Assistant - Simplify Your Attendance Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1A73E8;
+            --secondary-color: #003366;
+            --accent-color: #FF4081;
+            --light-bg: #F8F9FA;
+            --dark-bg: #343A40;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            color: #333;
+            overflow-x: hidden;
+            margin: 0;
+            height: 100%;
+        }
+
+        .navbar {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+
+        .hero {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 120px 0;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5); 
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #e91e63;
+            transform: scale(1.1);
+        }
+
+        .feature-card {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            background-color: white;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .testimonial {
+            background-color: var(--light-bg);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 30px 0;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+
+        .card {
+            border: none;
+            background-color: var(--light-bg);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .scroll-to-section {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            cursor: pointer;
+            display: none;
+            transition: transform 0.3s;
+        }
+
+        .scroll-to-section:hover {
+            transform: scale(1.1);
+        }
+
+        .scroll-to-section.show {
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Attendance Assistant</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#features">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonials">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="email.php">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="hero">
+    <div class="container">
+        <h1>Transform Your Attendance Management</h1>
+        <p class="lead">Effortlessly track attendance and boost productivity with our powerful, user-friendly platform.</p>
+        <a href="login.php" class="btn btn-primary">Get Started</a>
+    </div>
+</header>
+
+
+    <section id="features" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Key Features</h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="fas fa-chart-line feature-icon"></i>
+                        <h4>Real-Time Monitoring</h4>
+                        <p>Track attendance data in real-time for quick and efficient decision making.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="fas fa-mobile-alt feature-icon"></i>
+                        <h4>Mobile Friendly</h4>
+                        <p>Manage your attendance on-the-go with our fully responsive mobile interface.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="fas fa-lock feature-icon"></i>
+                        <h4>Secure & Reliable</h4>
+                        <p>Your data is protected with top-tier security protocols and reliable backups.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">What Our Users Say</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="testimonial">
+                        <p>"Attendance Assistant has streamlined our entire process. It's intuitive and fantastic!"</p>
+                        <footer class="blockquote-footer mt-3">Kenny, Principal at ChatFKR School</footer>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="testimonial">
+                        <p>"As a teacher, I find it incredibly easy to track attendance. This system saves me hours every week!"</p>
+                        <footer class="blockquote-footer mt-3">Oblong, Teacher at ChatFKR College</footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="contact" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Get in Touch</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-4 text-center">
+                <a href="https://www.facebook.com/Elarcosa20" target="_blank" class="d-block text-decoration-none mb-3">
+                    <i class="fab fa-facebook fa-3x text-primary"></i>
+                    <p class="mt-2 mb-0">Facebook</p>
+                </a>
+            </div>
+            <div class="col-md-4 text-center">
+                <a href="mailto:renziekyleelarcosa@gmail.com" class="d-block text-decoration-none mb-3">
+                    <i class="fas fa-envelope fa-3x text-danger"></i>
+                    <p class="mt-2 mb-0">Gmail</p>
+                </a>
+            </div>
+            <div class="col-md-4 text-center">
+                <a href="tel:+639932155699" class="d-block text-decoration-none mb-3">
+                    <i class="fas fa-phone fa-3x text-success"></i>
+                    <p class="mt-2 mb-0">+63 9932155699</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <button class="scroll-to-section" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" id="scrollToTopBtn">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+   
+    <footer class="footer text-center">
+        <div class="container">
+            <p>&copy; 2024 Attendance Assistant. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+   
+        window.onscroll = function () {
+            const scrollBtn = document.getElementById('scrollToTopBtn');
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollBtn.classList.add('show');
+            } else {
+                scrollBtn.classList.remove('show');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
